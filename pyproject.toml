@@ -1,0 +1,18 @@
+[project]
+name = "murd3r-b4t"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Monish Giani.",email = "256585194+thelazybastard@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "murd3r_b4t", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
