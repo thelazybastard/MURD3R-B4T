@@ -31,6 +31,12 @@ class Bot():
 
     def converse(self, prompt: str) -> None:
         self.user_state = UserState[self.check_prompt(prompt)]
+        """
+        match user state enum
+        each enum value must lead to the right bot_response list
+        randomize the list after getting the right one and assign to var
+        print the randomized value
+        """
 
     @staticmethod
     def check_prompt(prompt: str) -> str:
