@@ -8,10 +8,16 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "pytest (>=9.1.1,<10.0.0)",
+    "black (>=26.10.0,<27.0.0)",
+    "mypy (>=2.4.0,<3.0.0)"
 ]
 
 [tool.poetry]
 packages = [{include = "murd3r_b4t", from = "src"}]
+
+[tool.poetry.scripts]
+bot = "murd3r_b4t.main:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
