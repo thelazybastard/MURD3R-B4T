@@ -1,4 +1,5 @@
 import re
+import dialogue
 
 class Bot():
     def __init__(self, formal: bool):
