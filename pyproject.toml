@@ -14,10 +14,10 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "murd3r_b4t", from = "src"}]
+packages = [{include = "roach", from = "src"}]
 
 [tool.poetry.scripts]
-bot = "murd3r_b4t.main:main"
+bot = "roach.main:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
