@@ -1,12 +1,11 @@
 import argparse
 import bot
-import flags
 
 def main() -> None:
     parser = argparse.ArgumentParser(
         prog="MURD3R-B4T", description="BOT SENT TO ANNIHILATE THE HUMAN RACE"
     )
-    parser.add_argument("prompt", type=str, help="What you want to say to the bot")
+    
     parser.add_argument(
         "-f",
         "--family",
@@ -17,7 +16,11 @@ def main() -> None:
     args = parser.parse_args()
 
     b4t = bot.Bot(args.family)
-        
+
+    while True:
+        b4t.awake()
+
+    b4t.sleep()
 
 
 if __name__ == "__main__":
