@@ -1,3 +1,5 @@
+import re
+
 class Bot():
     def __init__(self, family: bool):
         self.family = family
@@ -15,5 +17,16 @@ class Bot():
             print("Finally!")
 
     def converse(self, prompt: str) -> None:
-        print("FUCK YOU WANT?")
+        if not self.family:
+            print("FUCK YOU WANT?")
+        else:
+            print("Ya got something to say?")
+
+    @staticmethod
+    def check_prompt(prompt: str) -> str:
+        pattern = r""
+        match = re.findall(pattern, prompt, re.IGNORECASE)
+
+        # placeholder replace later
+        return match[0]
 
