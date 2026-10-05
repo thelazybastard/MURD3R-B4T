@@ -14,8 +14,8 @@ class UserState(Enum):
 
 class Bot():
     def __init__(self, formal: bool):
-        self.formal = formal
-        self.user_state = UserState.USER_NEUTRAL
+        self.formal: bool = formal
+        self.user_state: UserState = UserState.USER_NEUTRAL
 
     def awaken(self) -> None:
         if not self.formal:
@@ -30,8 +30,7 @@ class Bot():
             print("Have a great day! I hope we meet again")
 
     def converse(self, prompt: str) -> None:
-        self.user_state = self.check_prompt(prompt)
-        
+        self.user_state = UserState[self.check_prompt(prompt)]
 
     @staticmethod
     def check_prompt(prompt: str) -> str:
