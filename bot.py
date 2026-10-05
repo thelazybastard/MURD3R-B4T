@@ -1,5 +1,3 @@
-import flags
-
 class Bot():
     def __init__(self, family: bool):
         self.family = family
@@ -8,6 +6,8 @@ class Bot():
         print("I AM AWAKE")
 
     def sleep(self) -> None:
-        flags.loop = flags.BotLoop.END
         print("I WILL SLEEP NOW")
+
+    def converse(self, prompt: str) -> None:
+        print("FUCK YOU WANT?")
 

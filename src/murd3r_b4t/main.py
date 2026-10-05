@@ -17,10 +17,11 @@ def main() -> None:
 
     b4t = bot.Bot(args.family)
 
+    b4t.awaken()
+
     while True:
-        b4t.awaken()
-
-
+        prompt = input("Sentient: ")
+        b4t.converse(prompt)
 
     b4t.sleep()
 
