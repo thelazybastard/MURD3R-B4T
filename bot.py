@@ -1,9 +1,21 @@
-import re
 import dialogue
+from enum import Enum, auto
+
+class UserState(Enum):
+    USER_HAPPY = auto()
+    
+    USER_NEUTRAL = auto()
+    
+    USER_SAD = auto()
+    
+    USER_FRUSTRATED = auto()
+    
+    USER_ANGRY = auto()
 
 class Bot():
     def __init__(self, formal: bool):
         self.formal = formal
+        self.user_state = UserState.USER_NEUTRAL
 
     def awaken(self) -> None:
         if not self.formal:
@@ -22,9 +34,10 @@ class Bot():
 
     @staticmethod
     def check_prompt(prompt: str) -> str:
-        pattern = r""
-        match = re.findall(pattern, prompt, re.IGNORECASE)
+        words = prompt.split(" ")
+        for word in words:
+            for emotion, expected_words in dialogue.user_response.items():
+                if word in expected_words:
+                    return emotion
 
-        # placeholder replace later
-        return match[0]
-
+        return UserState.USER_NEUTRAL.name

@@ -1,13 +1,13 @@
 user_response: dict[str, list[str]] = {
-    "user_happy": ["good", "great", "swell", "jolly", "delightful"],
+    "USER_HAPPY": ["good", "great", "swell", "jolly", "delightful"],
 
-    "user_neutral": ["fine", "ok", "decent", "well", "enough"],
+    "USER_NEUTRAL": ["fine", "ok", "decent", "well", "enough"],
 
-    "user_sad": ["bad", "sad", "tired", "unhappy", "need", "talk"],
+    "USER_SAD": ["bad", "sad", "tired", "unhappy", "need", "talk"],
 
-    "user_frustrated": ["crap", "horrible", "hate", "frustrated"],
+    "USER_FRUSTRATED": ["crap", "horrible", "hate", "frustrated"],
 
-    "user_angry": ["fuck", "bitch", "evil", "hate", "cunt", "asshole"],
+    "USER_ANGRY": ["fuck", "bitch", "evil", "hate", "cunt", "asshole"],
 }
 
 bot_response: dict[str, list[str]] = {
