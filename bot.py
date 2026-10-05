@@ -17,7 +17,7 @@ class Bot():
             print("Have a great day! I hope we meet again")
 
     def converse(self, prompt: str) -> None:
-        pass
+        print(self.check_prompt(prompt))
 
     @staticmethod
     def check_prompt(prompt: str) -> str:
