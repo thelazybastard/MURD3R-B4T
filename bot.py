@@ -4,7 +4,7 @@ class Bot():
     def __init__(self, family: bool):
         self.family = family
 
-    def awake(self) -> None:
+    def awaken(self) -> None:
         print("I AM AWAKE")
 
     def sleep(self) -> None:

@@ -18,7 +18,9 @@ def main() -> None:
     b4t = bot.Bot(args.family)
 
     while True:
-        b4t.awake()
+        b4t.awaken()
+
+
 
     b4t.sleep()
 
