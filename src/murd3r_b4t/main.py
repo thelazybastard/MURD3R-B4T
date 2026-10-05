@@ -17,11 +17,6 @@ def main() -> None:
     args = parser.parse_args()
 
     b4t = bot.Bot(args.family)
-
-    if flags.loop:
-        b4t.awake()
-
-    b4t.sleep()
         
 
 
