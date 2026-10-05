@@ -1,26 +1,23 @@
 import re
 
 class Bot():
-    def __init__(self, family: bool):
-        self.family = family
+    def __init__(self, formal: bool):
+        self.formal = formal
 
     def awaken(self) -> None:
-        if not self.family:
-            print("Fuck off!")
+        if not self.formal:
+            print("Yo, you good?")
         else:
-            print("Leave me alone!")
+            print("Good day, how are you?")
 
     def sleep(self) -> None:
-        if not self.family:
-            print("Good fucking riddance!")
+        if not self.formal:
+            print("See ya!")
         else:
-            print("Finally!")
+            print("Have a great day! I hope we meet again")
 
     def converse(self, prompt: str) -> None:
-        if not self.family:
-            print("FUCK YOU WANT?")
-        else:
-            print("Ya got something to say?")
+        pass
 
     @staticmethod
     def check_prompt(prompt: str) -> str:
