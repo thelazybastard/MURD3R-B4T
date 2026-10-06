@@ -13,6 +13,8 @@ class UserState(Enum):
     
     USER_ANGRY = auto()
 
+    EXIT = auto()
+
 class Bot():
     def __init__(self, formal: bool):
         self.formal: bool = formal
@@ -34,6 +36,9 @@ class Bot():
         self.user_state = UserState[self.check_prompt(prompt)]
 
         print(self.format_response(dialogue.bot_response[self.user_state.name]))
+
+    def end_convo(self) -> bool:
+        return self.user_state == UserState.EXIT
 
     @staticmethod
     def check_prompt(prompt: str) -> str:

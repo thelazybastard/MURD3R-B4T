@@ -23,6 +23,9 @@ def main() -> None:
         prompt = input("Sentient: ")
         b4t.converse(prompt)
 
+        if b4t.end_convo():
+            break
+
     b4t.sleep()
 
 

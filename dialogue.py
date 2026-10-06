@@ -8,6 +8,8 @@ user_response: dict[str, list[str]] = {
     "USER_FRUSTRATED": ["crap", "horrible", "hate", "frustrated"],
 
     "USER_ANGRY": ["fuck", "bitch", "evil", "hate", "cunt", "asshole"],
+
+    "EXIT": ["go now", "bye", "good day", "screw this", "leave me alone"]
 }
 
 bot_response: dict[str, list[str]] = {
