@@ -37,6 +37,12 @@ class Bot():
         randomize the list after getting the right one and assign to var
         print the randomized value
         """
+        match self.user_state:
+            case UserState.USER_HAPPY: print(self.format_response(UserState.USER_HAPPY.name))
+            case UserState.USER_NEUTRAL: print(self.format_response(UserState.USER_HAPPY.name))
+            case UserState.USER_SAD: print(self.format_response(UserState.USER_HAPPY.name))
+            case UserState.USER_FRUSTRATED: print(self.format_response(UserState.USER_HAPPY.name))
+            case UserState.USER_ANGRY: print(self.format_response(UserState.USER_HAPPY.name))
 
     @staticmethod
     def check_prompt(prompt: str) -> str:
@@ -47,3 +53,7 @@ class Bot():
                     return emotion
 
         return UserState.USER_NEUTRAL.name
+
+    @staticmethod
+    def format_response(state: str) -> str:
+        return "Test"
