@@ -33,12 +33,7 @@ class Bot():
     def converse(self, prompt: str) -> None:
         self.user_state = UserState[self.check_prompt(prompt)]
 
-        match self.user_state:
-            case UserState.USER_HAPPY: print(self.format_response(dialogue.bot_response[self.user_state.name]))
-            case UserState.USER_NEUTRAL: print(dialogue.bot_response[self.user_state.name])
-            case UserState.USER_SAD: print(dialogue.bot_response[self.user_state.name])
-            case UserState.USER_FRUSTRATED: print(dialogue.bot_response[self.user_state.name])
-            case UserState.USER_ANGRY: print(dialogue.bot_response[self.user_state.name])
+        print(self.format_response(dialogue.bot_response[self.user_state.name]))
 
     @staticmethod
     def check_prompt(prompt: str) -> str:
