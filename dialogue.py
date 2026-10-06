@@ -41,5 +41,11 @@ bot_response: dict[str, list[str]] = {
         "I understand you are angry. Let's all take a deep breath!",
         "We all feel that way, please don't feel ashamed of it",
         "Hey, i understand you're pissed, I would be too, but we need to stay calm"
+    ],
+
+    "EXIT": [
+        "Very well",
+        "Then i'll see you next time",
+        "I won't keep you further"
     ]
 }
