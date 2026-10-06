@@ -1,5 +1,6 @@
 import dialogue
 from enum import Enum, auto
+import random
 
 class UserState(Enum):
     USER_HAPPY = auto()
@@ -31,18 +32,13 @@ class Bot():
 
     def converse(self, prompt: str) -> None:
         self.user_state = UserState[self.check_prompt(prompt)]
-        """
-        match user state enum
-        each enum value must lead to the right bot_response list
-        randomize the list after getting the right one and assign to var
-        print the randomized value
-        """
+
         match self.user_state:
-            case UserState.USER_HAPPY: print(self.format_response(UserState.USER_HAPPY.name))
-            case UserState.USER_NEUTRAL: print(self.format_response(UserState.USER_HAPPY.name))
-            case UserState.USER_SAD: print(self.format_response(UserState.USER_HAPPY.name))
-            case UserState.USER_FRUSTRATED: print(self.format_response(UserState.USER_HAPPY.name))
-            case UserState.USER_ANGRY: print(self.format_response(UserState.USER_HAPPY.name))
+            case UserState.USER_HAPPY: print(self.format_response(dialogue.bot_response[self.user_state.name]))
+            case UserState.USER_NEUTRAL: print(dialogue.bot_response[self.user_state.name])
+            case UserState.USER_SAD: print(dialogue.bot_response[self.user_state.name])
+            case UserState.USER_FRUSTRATED: print(dialogue.bot_response[self.user_state.name])
+            case UserState.USER_ANGRY: print(dialogue.bot_response[self.user_state.name])
 
     @staticmethod
     def check_prompt(prompt: str) -> str:
@@ -55,5 +51,5 @@ class Bot():
         return UserState.USER_NEUTRAL.name
 
     @staticmethod
-    def format_response(state: str) -> str:
-        return "Test"
+    def format_response(response: list[str]) -> str:
+        return random.choice(response) 
