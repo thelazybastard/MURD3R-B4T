@@ -1,11 +1,10 @@
 import argparse
 import bot
 
+
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        prog="roach", description="your best friend"
-    )
-    
+    parser = argparse.ArgumentParser(prog="roach", description="your best friend")
+
     parser.add_argument(
         "-f",
         "--formal",
